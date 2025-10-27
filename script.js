@@ -71,3 +71,4 @@ function processCommand(inputText) {
 
   output.innerHTML += `<div>${result}</div><br>`;
 }
+showHelpOnLoad();
