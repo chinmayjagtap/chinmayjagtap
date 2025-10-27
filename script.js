@@ -12,22 +12,22 @@ const commands = {
   whoami - Show current username<br>
   git - Open GitHub profile<br>
   linkedin - Open LinkedIn profile<br>
-  ai - Placeholder for AI profile (add later)<br>
-  book - Open my book page<br>
+  ai - My Huggingface<br>
+  mybook - Open my own published book page<br>
   history - Show command history<br>
   gui - Open graphical interface (About Me page)<br>
   exit - Exit shell (clears screen)<br>`,
 
-  web: () => { openLink("gui.html"); return "Opening GUI page..."; },
-  gui: () => { openLink("gui.html"); return "Opening GUI page..."; },
+  web: () => { openLink("about.html"); return "Opening GUI page..."; },
+  gui: () => { openLink("about.html"); return "Opening GUI page..."; },
   cv: () => { openLink("resume.pdf"); return "Downloading resume.pdf ..."; },
   git: () => { openLink("https://github.com/chinmayjagtap"); return "Opening GitHub..."; },
   linkedin: () => { openLink("https://www.linkedin.com/in/chinmayjagtap/"); return "Opening LinkedIn..."; },
   ai: () => "AI profile not set yet. Add link to commands in script.js.",
   date: () => new Date().toString(),
-  whoami: "Chinmay",
+  whoami: "User",
   echo: (args) => args.join(" "),
-  book: () => { openLink("https://amzn.in/d/6lJCgCK"); return "Opening book link..."; },
+  mybook: () => { openLink("https://amzn.in/d/6lJCgCK"); return "Opening book link..."; },
   history: () => showHistory(),
   helptext: () => commands.help,
   exit: () => {
@@ -141,3 +141,4 @@ window.addEventListener("load", () => {
   appendHelp();
   inputEl.focus();
 });
+
